@@ -50,7 +50,7 @@ const handleSubmit = (ev) => {
 };
 
     return (
-        <div className="min-h-[calc(100vh-64px)] bg-[#CBD5E1] flex items-center justify-center p-4">
+        <div className="min-h-[calc(100vh-64px)] flex items-center justify-center p-4">
             <div className="w-full max-w-5xl grid lg:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl bg-white">
                 {/* Left: brand panel (hidden on small screens) */}
                 <div className="hidden lg:flex relative flex-col justify-between bg-[#6550E4] text-white p-10 overflow-hidden">
