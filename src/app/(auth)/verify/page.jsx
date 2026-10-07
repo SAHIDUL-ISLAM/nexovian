@@ -37,7 +37,10 @@ export default function VerifyPage() {
                 const store = pending.remember ? localStorage : sessionStorage;
                 store.setItem("nexovianUser", JSON.stringify(res.user));
                 setStatus("success");
-                redirectTimer = setTimeout(() => router.replace(`/${res.user.role}`), 1500);
+                redirectTimer = setTimeout(
+                    () => router.replace(`/${res.user.role}/dashboard`),
+                    1500
+                );
             } else {
                 setStatus("error");
             }
@@ -74,7 +77,7 @@ export default function VerifyPage() {
                             Taking you to your dashboard…
                         </p>
                         <button
-                            onClick={() => router.replace(`/${result.user.role}`)}
+                            onClick={() => router.replace(`/${result.user.role}/dashboard`)}
                             className="btn mt-6 w-full h-12 rounded-xl bg-[#6550E4] hover:bg-[#5340c9] text-white border-none"
                         >
                             Go to dashboard now
